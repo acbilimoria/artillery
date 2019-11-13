@@ -84,9 +84,13 @@ HttpEngine.prototype.createScenario = function(scenarioSpec, ee) {
     });
 
   console.log("beforeScenarioFns");
-  console.log(beforeScenarioFns);
+  console.log(beforeScenarioFns); // []
   console.log("afterScenarioFns");
-  console.log(afterScenarioFns);
+  console.log(afterScenarioFns); // []
+  console.log("scenarioSpec");
+  console.log(scenarioSpec);
+  console.log("scenarioSpec.flow");
+  console.log(scenarioSpec.flow);
   const newFlow = beforeScenarioFns.concat(
     scenarioSpec.flow.concat(afterScenarioFns));
 
