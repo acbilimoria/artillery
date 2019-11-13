@@ -508,6 +508,12 @@ function handleBeforeRequests(script, runnableScript, runnerEngines, testEvents)
 
     let name = runnableScript.before.engine || 'http';
     let engine = runnerEngines.find((e) => e.__name === name);
+    console.log("runnableScript.before");
+    console.log(runnableScript.before);
+    console.log("ee");
+    console.log(ee);
+    console.log("runnableScript");
+    console.log(runnableScript);
     let beforeTestScenario = engine.createScenario(runnableScript.before, ee);
     let beforeTestContext = createContext(script);
     beforeTestScenario(beforeTestContext, function(err, context) {
