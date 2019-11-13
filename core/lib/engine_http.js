@@ -83,6 +83,10 @@ HttpEngine.prototype.createScenario = function(scenarioSpec, ee) {
       return {'function': hookFunctionName};
     });
 
+  console.log("beforeScenarioFns");
+  console.log(beforeScenarioFns);
+  console.log("afterScenarioFns");
+  console.log(afterScenarioFns);
   const newFlow = beforeScenarioFns.concat(
     scenarioSpec.flow.concat(afterScenarioFns));
 
